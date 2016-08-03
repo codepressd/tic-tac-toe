@@ -69,15 +69,22 @@ ul{
 
 /* Minor styling*/
 table{
+	table-layout: fixed;
 	margin: 0 auto;
-	height: 600px;
-	width: 600px;
 	text-align: center;
-	padding-top: 20px;
+	width: 600px;
+	height: 600px;
+}
+tr{
+	height: 200px;
+	width: 200px;
 }
 section > h2{
 	padding: 30px 0; 
 	text-align: center;
+}
+td > h2{
+	font-size: 160px;
 }
 .first-row{
 	background-color: #000;
