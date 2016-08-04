@@ -1,5 +1,6 @@
-$(function(){
 	var TicTacToe = {
+
+		playerInput:[[],[],[]],
 
 		varSwitch : function(str){
 
@@ -11,9 +12,18 @@ $(function(){
 				return 'x';
 			}
 
+		},
+
+		addInput : function(pIndex,tarIndex,tarValue){
+
+			TicTacToe.playerInput[pIndex].splice(tarIndex, 0, tarValue);
+
 		}
 
-	}
+	};
+
+$(function(){
+
 
  
 
@@ -24,7 +34,7 @@ var ohhAndEx = '';
 		
 		ohhAndEx = TicTacToe.varSwitch(ohhAndEx);
 		var $target = $(event.target);
-
+		TicTacToe.addInput($target.parent().index(),$target.index(),ohhAndEx);
 		$($target).html('<h2>'+ohhAndEx+'</h2>');
 
 
